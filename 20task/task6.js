@@ -1,0 +1,10 @@
+var marks =50;
+console.log("Marks: " + marks);
+marks += 10;
+console.log("Updated Marks assigned +=: " + marks);
+marks -= 5;
+console.log("Final Marks assigned -=: " + marks);
+marks *= 2;
+console.log("Doubled Marks assigned *=: " + marks);
+marks /= 4;
+console.log("Quartered Marks: " + marks);
