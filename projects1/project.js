@@ -1,7 +1,8 @@
 var istrue = true;
 while (istrue) {
 
-    var num = parseInt(Math.random() * 100);
+    var num = Number(Math.random() * 100);
+
     var count = 10;
     while (true) {
         if (count == 0) {
