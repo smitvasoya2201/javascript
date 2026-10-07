@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Element Content</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #4f46e5, #9333ea);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            background-color: white;
+            width: 500px;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1{
+            color: #4f46e5;
+            margin-bottom: 20px;
+        }
+
+        h1 span{
+            color: #e11d48;
+        }
+
+        p{
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        #content{
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #111827;
+            border-left: 5px solid #4f46e5;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 id="heading">
+            Welcome to <span>JavaScript</span>
+        </h1>
+
+        <p id="paragraph">
+            Learning JavaScript DOM Properties
+        </p>
+
+        <div id="content">
+            <b>Frontend Development</b>
+        </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("heading").innerHTML = "Welcome to <span>JavaScript DOM</span>";
+        document.getElementById("paragraph").innerText = "Learning Content Modification in JavaScript";
+        document.getElementById("content").textContent = "Frontend Development with JavaScript";
+
+    </script>
+</body>
+</html>
+
+<!--
+
+=========================================
+Task: Modify Element Content Using JavaScript
+=========================================
+
+Objective:
+Learn how to modify HTML element content using:
+1. innerHTML
+2. innerText
+3. textContent
+
+-----------------------------------------
+Instructions
+-----------------------------------------
+
+Step 1:
+Open the given HTML file in your code editor.
+
+Step 2:
+Inside the <script> tag, select the following elements using
+document.getElementById():
+
+- Heading Element (id="heading")
+- Paragraph Element (id="paragraph")
+- Div Element (id="content")
+
+Step 3:
+Modify the content of the heading using the innerHTML property.
+
+New Content:
+Welcome to <span>JavaScript DOM</span>
+
+Step 4:
+Modify the content of the paragraph using the innerText property.
+
+New Content:
+Learning Content Modification in JavaScript
+
+Step 5:
+Modify the content of the div using the textContent property.
+
+New Content:
+Frontend Development with JavaScript
+
+Step 6:
+Run the program and verify that the updated content is
+displayed on the webpage.
+
+-----------------------------------------
+Expected Output
+-----------------------------------------
+
+Before Modification:
+
+Welcome to JavaScript
+
+Learning JavaScript DOM Properties
+
+Frontend Development
+
+
+After Modification:
+
+Welcome to JavaScript DOM
+
+Learning Content Modification in JavaScript
+
+Frontend Development with JavaScript
+
+
+-->
