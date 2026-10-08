@@ -15,7 +15,7 @@ document.getElementById("submitBtn").onclick = function (event) {
         document.getElementsByClassName("vali")[0].style.color = "red";
         return;
     }
-    if (document.getElementById("age").value == "" || !document.getElementById("age").value.includes("number")) {
+    if (document.getElementById("age").value == "" ) {
         // document.getElementsByClassName("vali")[1].style.display  = "block";
         document.getElementsByClassName("vali")[1].style.color = "red";
         return;
