@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="page">
+    <div class="cover" role="presentation"></div>
+
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="side">
+        <div class="avatar" aria-hidden="true">AM</div>
+        <h1>Alex Morgan</h1>
+        <p class="username">@alexmorgan</p>
+        <p class="bio">Front-end developer who likes clean layouts and well-named CSS classes. Currently learning full-stack development.</p>
+
+        <dl class="stats">
+          <div><dt>Projects</dt><dd>12</dd></div>
+          <div><dt>Followers</dt><dd>248</dd></div>
+          <div><dt>Following</dt><dd>96</dd></div>
+        </dl>
+
+        <a class="btn" href="#">Edit profile</a>
+        <a class="btn secondary " id="signout" href="loginpage.html">Sign out</a>
+      </aside>
+
+      <!-- Main content -->
+      <main class="main">
+        <input class="tab-radio" type="radio" name="tabs" id="tab-about" checked>
+        <input class="tab-radio" type="radio" name="tabs" id="tab-activity">
+
+        <div class="tab-bar">
+          <label class="tab-label" for="tab-about">About</label>
+          <label class="tab-label" for="tab-activity">Recent activity</label>
+        </div>
+
+        <div class="panels">
+          <section class="panel" id="panel-about">
+            <dl class="details">
+              <div><dt>Full name</dt><dd>Alex Morgan</dd></div>
+              <div><dt>Email</dt><dd>alex.morgan@example.com</dd></div>
+              <div><dt>Phone</dt><dd>+00 00000 00000</dd></div>
+              <div><dt>Location</dt><dd>Your city, Country</dd></div>
+              <div><dt>Member since</dt><dd>January 2026</dd></div>
+              <div>
+                <dt>Skills</dt>
+                <dd>
+                  <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git</li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="panel" id="panel-activity">
+            <ul class="activity">
+              <li><span class="dot"></span><span>Updated the profile page layout</span><span class="when">Today</span></li>
+              <li><span class="dot"></span><span>Finished the login form</span><span class="when">Yesterday</span></li>
+              <li><span class="dot"></span><span>Created a new project</span><span class="when">3 days ago</span></li>
+              <li><span class="dot"></span><span>Joined the community</span><span class="when">Jan 2026</span></li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+  <script>
+    document.querySelector("h1").innerHTML = localStorage.getItem("username");
+    document.querySelector(".avatar").innerHTML = localStorage.getItem("username")[0];
+
+    document.querySelector("#signout").onclick = ()=>{
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+    }
+  </script>
+</body>
+</html>

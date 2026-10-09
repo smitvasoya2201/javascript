@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main class="login">
+    <section class="intro">
+      <h1>Good to see you again.</h1>
+      <p>Sign in to pick up where you left off.</p>
+    </section>
+
+    <section class="form-side">
+      <h2>Sign in</h2>
+      <p class="sub">Enter your username and password.</p>
+
+      <form action="profilepage.html">
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Your username" autocomplete="username" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Your password" autocomplete="current-password" required>
+        </div>
+
+        <div class="row">
+          <label class="remember" for="remember">
+            <input type="checkbox" id="remember" name="remember">
+            Keep me signed in
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <p class="signup">New here? <a href="#">Create an account</a></p>
+    </section>
+  </main>
+
+
+  <script>
+        document.querySelector("button").onclick = ()=>{
+            localStorage.setItem("username",document.querySelector("#username").value);
+            localStorage.setItem("password",document.querySelector("#password").value);
+            console.log(localStorage.getItem("username"));
+            console.log(localStorage.getItem("password"));
+        }
+  </script>
+</body>
+</html>
