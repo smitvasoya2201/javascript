@@ -7,7 +7,7 @@ document.getElementById("bt1").onclick = function (){
     if(index<0){
         index = arr.length-1;
     }
-    console.log(index);
+
     document.getElementById("sec1").style.backgroundImage = `url(${arr[index]})`;
 }
 
