@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="score">
+        <p><b>Total </b> <code>:</code> <span>5</span></p>
+        <p><b>Correct</b> <code>:</code> <span class="correct">0</span></p>
+        <p><b>In-Correct</b> <code>:</code> <span class="incorrect">0</span></p>
+    </section>
+
+    <div class="timer">
+        <span>00</span>: <span class="second"></span>
+    </div>
+    <main>
+        <section class="question">
+            <div class="qs"><i>1</i>. <span>What is HTML ?</span></div>
+            <div class="op">
+                <aside>
+                    <input type="radio" name="option" id="opt1"> <label for="opt1">HYPER TEXT MARKUP LANGUAGE</label>
+                </aside>
+                <aside>
+                    <input type="radio" name="option" id="opt2"> <label for="opt2">HYPER MARKUP LANGUAGE</label>
+                </aside>
+                <aside>
+                    <input type="radio" name="option" id="opt3"> <label for="opt3">HYPER TEXT LANGUAGE</label>
+                </aside>
+                <aside>
+                    <input type="radio" name="option" id="opt4"> <label for="opt4">HYPER TEXT MARKUP</label>
+                </aside>
+            </div>
+        </section>
+        <div class="btn">
+            <button>Next</button>
+        </div>
+    </main>
+    <section class="result none">
+        <h1>User name</h1>
+        <h2>Score : <span>2</span> / 5</h2>
+        <p>Do you want to play Again ?</p>
+        <button class="yes">Yes</button>
+        <button class="no">No</button>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
