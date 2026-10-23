@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(15, 14, 14);
+}
+.score{
+    background-color: gainsboro;
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    font-family: verdana;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.score p{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+b{
+    font-weight: normal;
+    flex-grow: 1;
+}
+.timer{
+    background-color: gainsboro;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    font-family: verdana;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.question{
+    background-color: gainsboro;
+    font-family: calibri;
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.qs{
+    font-weight: bold;
+    font-size: 24px;
+}
+.op{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding:0px 20px;
+}
+.op aside{
+    padding: 10px 0px;
+    display: flex;
+    gap: 10px;
+}
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+button{
+    padding: 10px 20px;
+    font-family: calibri;
+    font-size: 24px;
+    border-radius: 8px;
+    border: none;
+}
+
+.result{
+    background-color: darkslategray;
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    padding: 20px;
+}
+
+.none{
+    display: none;
+}
