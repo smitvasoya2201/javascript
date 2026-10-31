@@ -1,7 +1,7 @@
 # WHETHER API PROJECT
 
 ## OUTPUT
-!["img"](/output/image.png);
+!["img"](output/image.png);
 
 
 ## video link
