@@ -37,7 +37,8 @@
 //     }
 //   ],
 //   "laptops" : [
-//     {
+//     {.
+
 //       "model": "MacBook Air",
 //       "price": 99900,
 //       "brand": "Apple",
@@ -122,6 +123,7 @@ const product = JSON.parse(localStorage.getItem("product"));
     
     
 // }
+
 // console.log(product.mobiles[0].brand);
 for (const key in product) {
     let h1 = document.createElement("h1");
