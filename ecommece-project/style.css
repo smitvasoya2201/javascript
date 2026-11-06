@@ -46,3 +46,19 @@ img{
     border-radius: 8px;
 
 }
+header div{
+    display: flex;
+    margin: 0px;
+    padding-top: 0px;
+    align-items: center;
+    flex-direction: column;
+    
+}
+header div input{
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}

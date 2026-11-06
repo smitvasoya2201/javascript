@@ -5,9 +5,10 @@ const today = new Date();
 function getwhetherinfo(city) {
     let cityname = document.querySelector(".search").value || city ;
     const API = `https://api.weatherapi.com/v1/current.json?key=e26ee2f87b994c98863100552231608&q=${cityname}`;
+   
     fetch(API).then((res) => {
         res.json().then((data) => {
-            console.log(data);
+           console.log(data);
             var urlpoint = "day";
             var is_day = data.current.is_day;
             var code = data.current.condition.code;

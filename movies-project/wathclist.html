@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <section></section>
+
+
+    <script>
+        const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+        const movies = JSON.parse(localStorage.getItem("movies"));
+
+        for (const key in movies) {
+            
+            const temp = movies[key].filter((movie)=>{
+                return watchlist.includes(movie.name);
+            })
+            movies[key] = temp;
+        }
+        
+
+        for (const key in movies) {
+        const main = document.createElement("main");
+        const h2 = document.createElement("h2");
+        const aside = document.createElement("aside");
+        h2.append(key);
+        main.appendChild(h2);
+
+        for (const movie of movies[key]) {
+            const div = document.createElement("div");
+            const h3 = document.createElement("h3");
+            const img = document.createElement("img");
+            const p = document.createElement("p");
+            const b = document.createElement("b");
+            const btn = document.createElement("button");
+
+            h3.append(movie.name);
+            img.src = movie.image;
+            p.append(movie.year);
+            b.append(movie.rating);
+            btn.append("Remove Watchlist");
+
+            div.appendChild(h3);
+            div.appendChild(img);
+            div.appendChild(p);
+            div.appendChild(b);
+            div.appendChild(btn);
+
+            aside.appendChild(div);
+        }
+        main.appendChild(aside);
+        document.querySelector("section").appendChild(main);
+    }
+
+
+    document.querySelector("section").onclick = function (e){
+    if(e.target.tagName == "BUTTON"){
+        const temp = watchlist.filter((value)=>{
+            return value!=e.target.parentElement.children[0].innerText;
+        })
+        localStorage.setItem("watchlist",JSON.stringify(temp));
+        location.href = "watchlist.html";
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -37,7 +37,7 @@
 //     }
 //   ],
 //   "laptops" : [
-//     {.
+//     {
 
 //       "model": "MacBook Air",
 //       "price": 99900,
@@ -115,19 +115,12 @@
 // localStorage.setItem("product",JSON.stringify(product));
 const product = JSON.parse(localStorage.getItem("product"));
 
-// for (const key in product) {
-//     for (const element of product[key]) {
-//           console.log(element.brand);
-//     }
-  
-    
-    
-// }
 
-// console.log(product.mobiles[0].brand);
-for (const key in product) {
+
+function displayData() {
+    for (const key in product) {
     let h1 = document.createElement("h1");
-    let section= document.createElement("section");
+    let section = document.createElement("section");
 
     h1.append(key);
     section.appendChild(h1);
@@ -155,16 +148,78 @@ for (const key in product) {
         div.appendChild(b);
         div.appendChild(p);
 
-       
 
 
-       aside.appendChild(div);
-       
-       
+
+        aside.appendChild(div);
+
     }
     section.appendChild(aside);
     document.querySelector("main").appendChild(section);
 
 
+}
+}
+// displayData();
+
+
+document.getElementById("search").onchange = function (e) {
+    let search = e.target.value;
+    for (const key in product) {
+        for (const element of product[key]) {
+            let temp = product[key].filter((ele) => {
+                return ele.model.toLowerCase().includes(search.toLowerCase());
+            })
+            product[key] = temp;
+
+
+        }
+        localStorage.setItem("filterData", JSON.stringify(product));
+
+    }
+}
+var filterData = JSON.parse(localStorage.getItem("filterData"));
+function filterDatas() {
+    for (const key in filterData) {
+    let h1 = document.createElement("h1");
+    let section = document.createElement("section");
+
+    h1.append(key);
+    section.appendChild(h1);
+    const aside = document.createElement("aside");
+
+    for (const element of filterData[key]) {
+        let img = document.createElement("img");
+        let h2 = document.createElement("h2");
+        let h3 = document.createElement("h3");
+        let b = document.createElement("b");
+        let p = document.createElement("p");
+
+        let div = document.createElement("div");
+        // let aside = document.createElement("aside");
+
+        img.src = element.img;
+        h2.append(element.model);
+        h3.append(element.price);
+        b.append(element.brand);
+        p.append(element.description);
+
+        div.appendChild(img);
+        div.appendChild(h2);
+        div.appendChild(h3);
+        div.appendChild(b);
+        div.appendChild(p);
+
+
+
+
+        aside.appendChild(div);
+
+    }
+    section.appendChild(aside);
+    document.querySelector("main").appendChild(section);
+
 
 }
+}
+filterDatas();
